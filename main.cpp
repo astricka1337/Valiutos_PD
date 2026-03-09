@@ -61,6 +61,29 @@ int main() {
         cout << fixed << setprecision(2);
 
         // Atliekame valiutos keitimo veiksmus
+
+        if (pasirinkimas == 1) {
+            cout << valiuta << " kursai uz 1 eur";
+            cout << "Bendras: " << kursas_bendras;
+            cout << "Pirkti: " << kursas_pirkti;
+            cout << "Parduoti: " << kursas_parduoti;
+        }
+        else if (pasirinkimas == 2) {
+            double kiekis_eur;
+            cout << "Kiek euru keisite";
+            cin >> kiekis_eur;
+            // Eurus dauginame is pasirinkto kurso
+            double resultas_eur = kiekis_eur * kursas_pirkti;
+            cout << "Uz " << kiekis_eur << " eur " << resultas_eur << "" << valiuta;
+        }
+        else if (pasirinkimas == 3) {
+            double kiekis_val;
+            cout << "kiek " << valiuta << " norite parduoti?";
+            cin >> kiekis_val;
+            // Parduodant daliname is pardavimo kurso
+            double gausi_eur = kiekis_val / kursas_parduoti;
+            cout << "Pardaves " << kiekis_val << " " << valiuta << " " << " gausi: " << gausi_eur << "EUR";
+        }
     }
 
 
