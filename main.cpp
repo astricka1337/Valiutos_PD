@@ -19,7 +19,7 @@ int main() {
         cout << "2. Pirkti valiutą";
         cout << "3. Parduoti valiutą";
         cout << "4. Išėjimas";
-        cout << "Pasirinkkite veiksmą";
+        cout << "Pasirinkkite veiksmą: ";
         cin >> pasirinkimas;
 
         if (pasirinkimas == 4) {
@@ -33,7 +33,7 @@ int main() {
         }
 
         string valiuta;
-        cout << "Pasirinkite valiuta (GBP, USD, INR";
+        cout << "Pasirinkite valiuta (GBP, USD, INR) ";
         cin >> valiuta;
 
         // Kintamieji valiutos kursui išsaugoti
@@ -70,11 +70,11 @@ int main() {
         }
         else if (pasirinkimas == 2) {
             double kiekis_eur;
-            cout << "Kiek euru keisite";
+            cout << "Kiek euru keisite: ";
             cin >> kiekis_eur;
             // Eurus dauginame is pasirinkto kurso
             double resultas_eur = kiekis_eur * kursas_pirkti;
-            cout << "Uz " << kiekis_eur << " eur " << resultas_eur << "" << valiuta;
+            cout << "Uz " << kiekis_eur << " eur " << resultas_eur << " " << valiuta;
         }
         else if (pasirinkimas == 3) {
             double kiekis_val;
@@ -82,7 +82,7 @@ int main() {
             cin >> kiekis_val;
             // Parduodant daliname is pardavimo kurso
             double gausi_eur = kiekis_val / kursas_parduoti;
-            cout << "Pardaves " << kiekis_val << " " << valiuta << " " << " gausi: " << gausi_eur << "EUR";
+            cout << "Pardaves " << kiekis_val << " " << valiuta << " " << " gausi: " << gausi_eur << " EUR ";
         }
     }
 
