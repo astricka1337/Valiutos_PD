@@ -21,11 +21,51 @@ int main() {
         cout << "4. Išėjimas";
         cout << "Pasirinkkite veiksmą";
         cin >> pasirinkimas;
+
+        if (pasirinkimas == 4) {
+            cout << "Programa baigta";
+            break;
+        }
+
+        if (pasirinkimas < 1 || pasirinkimas > 4) {
+            cout << "Klaida. Rinkite tarp 1 ir 4";
+            continue;
+        }
+
+        string valiuta;
+        cout << "Pasirinkite valiuta (GBP, USD, INR";
+        cin >> valiuta;
+
+        // Kintamieji valiutos kursui išsaugoti
+        double kursas_bendras = 0, kursas_pirkti = 0, kursas_parduoti = 0;
+
+        // Priskiriame kursa prie pasirinktos valiutos
+        if (valiuta == "GBP") {
+            kursas_bendras = gbp_bendras;
+            kursas_pirkti = gbp_pirkti;
+            kursas_parduoti = gbp_parduoti;
+        } else if (valiuta == "USD") {
+            kursas_bendras = usd_bendras;
+            kursas_pirkti = usd_pirkti;
+            kursas_parduoti = usd_parduoti;
+        } else if (valiuta == "INR") {
+            kursas_bendras = inr_bendras;
+            kursas_pirkti = inr_pirkti;
+            kursas_parduoti = inr_parduoti;
+        } else {
+            cout << "Klaida, tokios valiutos neturime";
+            continue;
+        }
+
+        // Apvaliname
+        cout << fixed << setprecision(2);
+
+        // Atliekame valiutos keitimo veiksmus
     }
 
-    if (pasirinkimas == 4) {
-        cout << "Progama baigta";
-    }
+
+
+
     return 0;
     // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
