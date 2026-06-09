@@ -1,10 +1,13 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <windows.h>
 
 using namespace std;
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
+    SetConsoleOutputCP(65001);
+    SetConsoleCP(65001);
     // Valiutų kursai:
     double gbp_bendras = 0.8729, gbp_pirkti = 0.8600, gbp_parduoti = 0.9220;
     double usd_bendras = 1.1793, usd_pirkti = 1.1460, usd_parduoti = 1.2340;
@@ -14,12 +17,12 @@ int main() {
 
     // Naudoju while ciklą, duoti pasirnkimą vartotojui
     while (pasirinkimas != 4) {
-        cout << "Pasrinkite valiutą:";
-        cout << "1. Valiutos kurso palyginimas";
-        cout << "2. Pirkti valiutą";
-        cout << "3. Parduoti valiutą";
-        cout << "4. Išėjimas";
-        cout << "Pasirinkkite veiksmą: ";
+        cout << "Pasirinkite valiutą:" << endl;
+        cout << "1. Valiutos kurso palyginimas" << endl;
+        cout << "2. Pirkti valiutą" << endl;
+        cout << "3. Parduoti valiutą" << endl;
+        cout << "4. Išėjimas" << endl;
+        cout << "Pasirinkite veiksmą: ";
         cin >> pasirinkimas;
 
         if (pasirinkimas == 4) {
@@ -85,10 +88,5 @@ int main() {
             cout << "Pardaves " << kiekis_val << " " << valiuta << " " << " gausi: " << gausi_eur << " EUR ";
         }
     }
-
-
-
-
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
